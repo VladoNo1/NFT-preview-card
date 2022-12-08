@@ -1,0 +1,158 @@
+:root {
+  --clr-primary-100: hsl(215, 51%, 70%);
+  --clr-primary-200: hsl(178, 100%, 50%);
+
+  --clr-neutral-100: hsl(217, 54%, 11%);
+  --clr-neutral-300: hsl(216, 50%, 16%);
+  --clr-neutral-900: hsl(215, 32%, 27%);
+  --clr-neutral-900: hsl(0, 0%, 100%);
+
+  --fontfamily-main: "Outfit", sans-serif;
+
+  --fontweight-light: 300;
+  --fontweight-regular: 400;
+  --fontweight-bold: 600;
+}
+
+/*CSS reset*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: var(--fontfamily-main);
+  font-weight: var(--fontweight-regular);
+  color: var(--clr-primary-100);
+  font-size: 1.8rem;
+  background-color: var(--clr-neutral-100);
+  display: grid;
+  place-content: center;
+  margin: 2rem;
+  /*height: 100vh;*/
+}
+.product {
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: var(--clr-neutral-300);
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 350px;
+
+  /*border: 2px solid white;*/
+}
+.content {
+  padding: 1rem;
+}
+
+p {
+  font-weight: var(--fontweight-regular);
+}
+.product_image {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.title {
+  color: var(--clr-neutral-900);
+  font-weight: var(--fontweight-regular);
+}
+
+.description {
+  padding: 2rem 0;
+  text-align: left;
+  font-weight: var(--fontweight-regular);
+  font-size: 1.7rem;
+}
+.grid-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  padding: 1rem;
+}
+.price {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: space-around;
+}
+.value {
+  color: var(--clr-primary-200);
+}
+.time {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: space-around;
+}
+
+hr {
+  border-top: 1px solid var(--clr-neutral-300);
+  margin-top: 1rem;
+}
+.attribution_flex {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.author {
+  color: var(--clr-neutral-900);
+}
+.avatar {
+  border: var(--clr-neutral-900);
+  height: 5rem;
+  width: 5rem;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 600px) {
+  .content {
+    max-width: 400px;
+  }
+}
