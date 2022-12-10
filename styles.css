@@ -72,8 +72,8 @@ body {
   background-color: var(--clr-neutral-100);
   display: grid;
   place-content: center;
-  margin: 2rem;
-  padding: 2 rem;
+  min-height: 100vh;
+  padding: 2rem;
 }
 .product {
   overflow: hidden;
